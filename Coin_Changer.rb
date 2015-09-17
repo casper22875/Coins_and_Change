@@ -1,11 +1,11 @@
-def coin_changer(value)
-	if value == 1
-	change = {penny: 1, nickel: 0,dime: 0,quarter: 0}
-	elsif value == 5
-	change = {penny: 0, nickel: 1,dime: 0,quarter: 0}
-	elsif value == 10
-	change = {penny: 0, nickel: 0,dime: 1,quarter: 0}
-	elsif value == 25
-	change = {penny: 0, nickel: 0,dime: 0,quarter: 1}
+def coin_changer(cents)
+	jingle = {penny: 0,nickel: 0,dime: 0,quarter: 0}
+	jingle_jangle ={quarter: 25,dime: 10,nickel: 5,penny: 1}
+	jingle_jangle.each do |coins,value|
+		if cents == value
+		jingle[coins] +=1
 	end
+end
+jingle
+
 end
