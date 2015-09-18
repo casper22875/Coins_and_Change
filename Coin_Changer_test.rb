@@ -25,7 +25,10 @@ def test_for_twentyfive_cents
 	coin_changer(25))
 end
 
-
+def test_for_six_cents
+	assert_equal({penny: 1,nickel: 1,dime: 0,quarter: 0},
+	coin_changer(6))
+end
 
 
 
